@@ -1,0 +1,458 @@
+% Ryan Avery - Curriculum Vitae
+% Copyright 2019 Ryan Avery
+% Email: ravery@ucsb.edu
+% Web: http://caylor.eri.ucsb.edu/people/avery/
+
+\documentclass[12pt,letterpaper]{report}
+
+\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) so accented characters are a single glyph
+\usepackage[utf8]{inputenc} % allow input of utf-8 encoded characters
+\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\usepackage[USenglish]{babel} % automatically regionalize hyphens, quote marks, etc
+\usepackage{microtype} % improves text appearance with kerning, etc
+\usepackage{datetime} % enable formatting of date output
+\usepackage{tabto} % make nice tabbing
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
+\usepackage{geometry} % manually set page margins
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{titlesec} % allow custom section fonts
+
+% what is your name?
+\newcommand{\myname}{Ryan Avery}
+
+% define a default font face and set it as the body font
+\usepackage{crimson} % document's serif font
+\usepackage{helvet}  % document's sans serif font
+
+% define how far to tab for list items with left-aligned date - different font faces need different widths
+\newcommand{\listtabwidth}{1.75cm}
+
+% set name font to title the document
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% set section heading fonts and before/after spacing
+\SetTracking{encoding=*}{20}
+\titleformat{\section}{\sffamily\small\bfseries\lsstyle\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{24pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
+
+% set subsection heading fonts and before/after spacing
+\titleformat{\subsection}{\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+
+% set page margins
+\geometry{body={6.5in, 9.0in},
+	left=1.0in,
+	top=1.0in}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% define space between list items
+\newcommand{\listitemspace}{0.15em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+			\setlength{\parskip}{0em}
+			\setlength{\itemsep}{\listitemspace}
+			\setlength{\parsep}{\listitemspace}}}
+	{\end{list}}
+
+% make tabbed lists so content is left-aligned next to years
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+	labelindent=0em,
+	topsep=0em,
+	partopsep=0em,
+	itemsep=\listitemspace,
+	parsep=\listitemspace,
+	font=\normalfont}
+
+% print the month and year only when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define hyperlink appearance and metadata for pdf properties
+\hypersetup{
+	colorlinks = true,
+	urlcolor = black,
+	pdfauthor = {\myname},
+	pdfkeywords = {ecohydrology, vegetation remote sensing, isotope hydrology, machine learning, groundwater},
+	pdftitle = {\myname: Curriculum Vitae},
+	pdfsubject = {Curriculum Vitae},
+	pdfpagemode = UseNone
+}
+
+\begin{document}
+	\raggedright
+	
+	% display name as the document title
+	\namefont{\myname}
+	
+	% contact info
+	\vspace{1em}
+	\begin{minipage}[t]{0.495\textwidth}
+		Department of Geography \\
+		University of California, Santa Barbara \\
+		Santa Barbara, California
+	\end{minipage}
+	\begin{minipage}[t]{0.495\textwidth}
+		Email: ravery@ucsb.edu \\
+		Web: \href{http://caylor.eri.ucsb.edu/people/avery/}{http://caylor.eri.ucsb.edu/people/avery/} \\
+		Phone: +1 916 897 7076
+	\end{minipage}
+	\vspace{0.5em}
+	
+	
+	
+	\section*{Education}
+	
+	\begin{tablist}
+		
+		\item[Ph.D. student] \tab Geography, University of California, Santa Barbara, 2021 (expected) \\
+		Adviser: Kelly Caylor 
+		
+		\item[B.S.]  \tab Environmental Sciences: Biological Sciences Concentration, University of California, Berkeley, 2016
+		
+	\end{tablist}	
+
+
+	
+	\section*{Research Interests}
+	
+	\begin{itemize}
+		
+		\item Ecohydrological measurement and modeling, particularly isotope hydrology and water balance estimation
+		
+		\item Classification and clustering of multispectral imagery for object detection and segmentation
+		
+		\item Spatial data science: computational statistics, machine learning, big data, visualization, spatial analysis
+		
+		\item Coupled human-natural systems and decison making and policy around water resources 
+		
+	\end{itemize}
+	
+	
+	
+	\section*{Publications}
+	
+	
+	\subsection*{Reports and Working Papers}
+	
+	\begin{tablist}
+		
+		\item[2017] \tab \enquote{Detecting Changes in Nighttime Sky Brightness over Grand Teton National Park with the Suomi NPP VIIRS Sensor} Avery, R., V. Warda, S. Chu, S. Chao. 2017. NASA DEVELOP Technical Report. 
+
+	    \item[2017] \tab \enquote{Enhancements to Visualization of CALIPSO (VOCAL) through Case Studies of Saharan Dust} Pampalone, C. R. Avery, W. Turner. 2017. NASA DEVELOP Technical Report.
+
+        \item[2017] \tab \enquote{A Threshold-Based Decision Tree Approach to Mapping Landscape Disturbance in Glacier National Park} Avery, R., Mays, C., Alvarado A. 2017. NASA DEVELOP Technical Report.
+
+        \item[2016] \tab \enquote{Mapping Invasive Species to Efficiently Monitor Southwestern National Park Areas} Avery, R., K. Landesman, T. Whaley. 2016. NASA DEVELOP Technical Report.
+	
+	
+    \subsection*{Manuscripts in Preparation}
+	
+	\begin{tablist}
+				
+		\item[\the\year] \tab Avery, R., L. Estes, K. Caylor, S., R. Eastman, Ye, L. Song \enquote{A Convolutional Neural Network Approach for Segmenting Smallholder Agriculture and Comparison to Modern Machine Learning Methods} Target: \textit{Remote Sensing of Environment}, Summer 2019.
+		
+		\item[\the\year] \tab Avery, R., K. Caylor, M. McCabe, M. Mayes, L. Estes \enquote{Field-Scale Evapotranspiration Maps across Global Dryland Center Pivot Agriculture} Target: \textit{Remote Sensing of Environment}, Fall 2019.
+		
+		\item[\the\year] \tab Tuholske, C., K. Caylor, T. Evans, R. Avery \enquote{Triangulating Urban Agglomerations Hotspots Across Africa} Target: \textit{Environmental Research Letters}, Spring 2019.
+	
+	\end{tablist}
+	
+	\subsection*{Campus Talks}
+	
+    \section*{Conference Activity}
+	
+	
+	\subsection*{Conference Presentations}
+	
+	Presenting author \textit{italicized}, if other.\bigskip
+	
+	\begin{tablist}
+		
+		\item[2019] \tab Boeing, G. \enquote{The Evolution of American Street Network Design and Planning.} Urban Affairs Association Annual Conference. Los Angeles, California. Apr 24--27.
+		
+		\item[2019] \tab Abdelkader, A., G. Boeing, \textit{B.~T. Fasy}, D.~L. Millman. \enquote{Local Persistent Homology-Based Distances between Nonplanar Road Networks.} Joint Mathematics Meetings. Baltimore, Maryland. Jan 16--19.
+		
+		\item[2019] \tab Boeing, G. \enquote{Street Network Patterns, Orientation, and Entropy around the World.} Transportation Research Board Annual Meeting. Washington, DC. Jan 13--17.
+		
+		\item[2018] \tab \textit{Abdelkader, A.}, G. Boeing, B.~T. Fasy, D.~L. Millman. \enquote{Topological Distance Between Nonplanar Transportation Networks.} Fall Workshop on Computational Geometry. Queens, New York. Oct 26--27.
+		
+		\item[2018] \tab Boeing, G. \enquote{Sociodemographic Representation of Online Rental Housing Listings: Information Surpluses and Deficits.} Association of Collegiate Schools of Planning Annual Conference. Buffalo, New York. Oct 25--28.
+		
+		\item[2018] \tab \textit{Waddell, P.}, I. Garcia-Dorado, S. Maurer, G. Boeing, M. Gardner, E. Porter, D. Aliaga. \enquote{Urban Modeling Without Zones: A Metropolitan Graph-Based Microsimulation of Real Estate Markets and Transportation.} Association of Collegiate Schools of Planning Annual Conference. Buffalo, New York. Oct 25--28.
+				
+	\end{tablist}
+	
+	
+	
+	\section*{Grants and Awards}
+	
+	\subsection*{Grants and Fellowships}
+	
+	\begin{tablist}
+		
+		\item[2018] \tab National Geographic and Microsoft AI for Earth research grant (\$100,000). Role: Primary Author and Project Member.
+				
+	\end{tablist}
+	
+	
+	
+	\section*{Teaching Experience}
+	
+	\subsection*{University of California, Santa Barbara}
+	
+	\begin{itemize}
+		
+		\item Big Data for Cities (Spring '19)
+		
+		\item Advanced Spatial Analysis of Urban Systems (Spring '19)
+		
+		\item Urban Theory and Science (Fall '18)
+		
+	\end{itemize}
+	
+	\subsection*{University of California, Berkeley}
+	
+	\begin{itemize}
+		
+		\item Urban Informatics and Visualization (Fall '13, '14, '15, '16: grad student instructor, co-lead instructor)
+		
+	\end{itemize}
+	
+	\subsection*{Planetizen}
+	
+	\begin{itemize}
+		
+		\item Python for Planners; Data Analysis and Visualization for Planners; Geospatial Data Analysis; Street Network Analysis
+		
+	\end{itemize}
+	
+	
+	\section*{Service}
+	
+	\subsection*{Peer Reviewer}
+	
+	\begin{itemize}
+		
+		\item \textit{Cities}
+		
+		\item \textit{Environment and Planning B: Urban Analytics and City Science}
+		
+		\item \textit{European Physical Journal: Data Science}
+		
+		\item \textit{International Journal of Geographical Information Science}
+		
+		\item \textit{International Planning Studies}
+
+		\item \textit{International Regional Science Review}
+		
+		\item \textit{ISPRS International Journal of Geo-Information}
+		
+		\item \textit{Journal of the American Planning Association}
+		
+		\item \textit{Journal of Transport and Land Use}
+		
+		\item \textit{Landscape and Urban Planning}
+		
+		\item \textit{Mathematics}
+		
+		\item \textit{Nonlinear Dynamics}
+		
+		\item \textit{PLOS One}
+		
+		\item \textit{Sustainable Cities and Society}
+		
+		\item \textit{Transactions in GIS}
+		
+		\item \textit{Urban Design International}
+		
+	\end{itemize}
+	
+	\subsection*{Service to Field}
+	
+	\begin{itemize}
+		
+		\item Review and Appraisal Committee, Association of Collegiate Schools of Planning, 2018--
+		
+		\item Scientific Committee, Symposium on Simulation for Architecture and Urban Design, 2018--
+		
+		\item Book review editor, \textit{Berkeley Planning Journal}, 2013--14
+		
+	\end{itemize}
+	
+	\subsection*{Service to Department}
+	
+	\begin{itemize}
+		
+		\item Standing Committee on Digital Proficiencies and Quantitative Methods, NU CSSH, 2018--
+		
+		\item Ph.D. program faculty representative, UC Berkeley DCRP, 2015--16
+		
+		\item Ph.D. program admissions committee, UC Berkeley DCRP, 2015--16
+		
+	\end{itemize}
+	
+	
+	
+	\section*{Professional Affiliations}
+	
+	\begin{itemize}
+		
+		\item American Association of Geographers
+		
+		\item American Planning Association
+		
+		\item Association of Collegiate Schools of Planning
+		
+		\item Association for Computing Machinery
+		
+		\item Complex Systems Society
+		
+		\item Regional Studies Association
+		
+		\item New York Academy of Sciences
+		
+		\item Project Management Institute
+		
+		\item Python Software Foundation
+		
+		\item Urban Affairs Association	
+		
+	\end{itemize}
+	
+	
+	
+	\section*{Credentials}
+	
+	\begin{itemize}
+		
+		\item U.S. Department of Defense secret clearance
+		
+		\item U.S. Department of Homeland Security public trust
+		
+		\item Project Management Professional (PMP)
+		
+	\end{itemize}
+	
+	
+	
+	\section*{Consulting Engagements}
+	
+	\begin{tablist}
+		
+		\item[2017--19] \tab The Public Good Projects	
+		
+		\item[2017--18] \tab Calthorpe Analytics
+		
+		\item[2016--18] \tab UrbanSim Inc.
+		
+		\item[2013--18] \tab Avalon Health Economics
+		
+		\item[2013]     \tab Raimi \& Associates
+		
+		\item[2009--13] \tab Accenture
+		
+	\end{tablist}
+	
+	
+	
+	\section*{Professional Experience}
+	
+	\begin{tablist}
+		
+		\item[2009--13] \tab Accenture, Consultant/Project Manager. London, England; New York, New York; San Diego, California.
+		
+		\item[2007--09] \tab Permission Data, Front-End Systems Product Manager. New York, New York.
+		
+		\item[2004--07] \tab Acumen Inc., Web Systems Developer. Mesa, Arizona.
+		
+	\end{tablist}
+	
+	
+	
+	\section*{Selected Media Coverage}
+	
+	Complete listing available at https://geoffboeing.com/press/ \bigskip
+	
+	\begin{tablist}
+		
+		\item 2018 \tab \textit{CityLab}. \enquote{Visualizing the Hidden Logic of Cities} Jul 26.
+		
+		\item 2018 \tab \textit{New Statesman CityMetric}. \enquote{Do British Cities Have Grid Systems? We Used Science to Find Out.} Jul 23.
+		
+		\item 2018 \tab \textit{99 Percent Invisible}. \enquote{On the Grid: Visualizing Street Network Orientations Across 50 Global Cities.} Jul 20.
+		
+		\item 2018 \tab \textit{Fast Company}. \enquote{How Crazy Is Your City's Plan?} Jul 16.
+		
+		\item 2018 \tab \textit{The Boston Globe}. \enquote{Boston's Streets Do Go in All Sorts of Directions.} Jul 12.
+		
+		\item 2018 \tab \textit{Slate}. \enquote{Elegant Graphs Reduce 25 American Cities to Their Design Essence.} Jul 11.	
+		
+		\item 2018 \tab \textit{Chicago Magazine}. \enquote{What Craigslist Can Tell Us About Rents in Chicago.} Jan 24.
+		
+		\item 2017 \tab \textit{The San Francisco Chronicle}. \enquote{Stunning, Simple Maps Show San Francisco versus Other Global Cities.} Jun 19.
+		
+		\item 2017 \tab \textit{The Daily Mail}. \enquote{Square Mile Maps Reveal How Different the World's Cities Really Are.} Jun 9.
+		
+		\item 2017 \tab \textit{Forbes}. \enquote{Understanding Our Cities, Thanks to Beautiful Maps.} Feb 7.
+		
+		\item 2017 \tab \textit{Fast Company}. \enquote{Turn Your Local Streets into a Map That Reveals the Character of Your Neighborhood.} Feb 6.
+		
+		\item 2017 \tab \textit{Domus Magazine}. \enquote{Do-It-Yourself City Mapping.} Jan 23.
+		
+		\item 2017 \tab \textit{CityLab}. \enquote{A Digital Window into Your City's Urban Form.} Jan 17.
+		
+		\item 2017 \tab \textit{Discovery News}. \enquote{Compare City Street Grids One Square Mile at a Time.} Jan 9.
+		
+		\item 2016 \tab \textit{The Washington Post}. \enquote{What More Than 1 Million Craigslist Rental Listings Tell Us about the Housing Market.} Sep 1.
+		
+		\item 2016 \tab \textit{Fast Company}. \enquote{11 Million Craigslist Ads Show Which Cities Have the Highest Rents.} Sep 1.
+		
+		\item 2016 \tab \textit{NextCity}. \enquote{What 11 Million Craigslist Posts Show About Affordable Housing.} Aug 26.
+		
+	\end{tablist}
+	
+	
+	
+	\section*{Skills and Methods}
+	
+	\subsection*{Statistical and Computational Methods}
+	
+	\begin{itemize}
+		
+		\item Computational statistics and machine learning, systems analysis, data mining, data wrangling, Python (including numpy, scipy, pandas, matplotlib, statsmodels, networkx, and scikit-learn), JavaScript, HTML, web scraping, MySQL, Postgres, and various other databases.
+		
+	\end{itemize}
+	
+	\subsection*{Geospatial Methods}
+	
+	\begin{itemize}
+		
+		\item Spatial analysis, network analysis, PostGIS, QGIS, ArcGIS, geopandas, Leaflet, CARTO, agent-based spatial modeling and microsimulation. I developed and maintain the OSMnx street network modeling software.
+		
+	\end{itemize}
+	
+	\subsection*{International Experience}
+	
+	\begin{itemize}
+		
+		\item I have previously worked professionally in the United States, the United Kingdom, Malawi, Mozambique, and Cambodia.
+		
+	\end{itemize}
+	
+	
+	
+	% display today's date as Month Year after a vertical space below the end of the text
+	\begin{center}
+		\vspace{6em}
+		%\vfill
+		Updated \monthyeardate\today
+	\end{center}
+	
+	
+	
+\end{document}
