@@ -1,3 +1,3 @@
 # Academic CV
 
-This repo contains my academic CV, available as a [PDF](cv-gboeing.pdf). It generally conforms to Karen Kelsky's guidelines, with some tweaks for clearer information presentation and nicer typography.
+This repo contains my academic CV, available as a [PDF](cv-ravery.pdf). It is adapted from Geoff Boing's cv template.
